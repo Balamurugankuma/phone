@@ -11,8 +11,8 @@ class createuser extends StatefulWidget {
 }
 
 class _createuserState extends State<createuser> {
-  TextEditingController _namecontroller = TextEditingController();
-  TextEditingController _phonenumbercontroller = TextEditingController();
+  final TextEditingController _namecontroller = TextEditingController();
+  final TextEditingController _phonenumbercontroller = TextEditingController();
   bool namevalide = false;
   bool phonevalide = false;
   contact user = contact();
@@ -37,7 +37,6 @@ class _createuserState extends State<createuser> {
                 await user_service.Saveuser(user);
                 Navigator.pop(context, true);
               }
-              ;
             },
             style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
             child: Text('Save', style: TextStyle(color: Colors.black)),

@@ -18,8 +18,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   bool isdark = false;
   String phone_number = "";
-  TextEditingController _phonenumbercontroller = TextEditingController();
-  TextEditingController _searchcontactscontroller = TextEditingController();
+  final TextEditingController _phonenumbercontroller = TextEditingController();
+  final TextEditingController _searchcontactscontroller =
+      TextEditingController();
   List<contact> _list = [];
   List<Map<String, dynamic>> searchresults = [];
   bool search = true;
@@ -34,7 +35,6 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     getdata();
   }
